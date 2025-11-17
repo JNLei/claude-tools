@@ -1,0 +1,21 @@
+{
+  "id": "skill-developer",
+  "name": "Skill Developer",
+  "category": "skills",
+  "description": "Create and manage Claude Code skills following Anthropic best practices. Covers skill structure, trigger patterns, enforcement levels, and hook mechanisms.",
+  "author": "ClaudeSmith",
+  "version": "1.0.0",
+  "tags": ["skill-development", "meta", "triggers", "hooks", "yaml", "best-practices"],
+  "featured": true,
+  "files": {
+    "main": "SKILL.md",
+    "additional": ["ADVANCED.md", "HOOK_MECHANISMS.md", "HOW-SKILL-WORKS.md", "PATTERNS_LIBRARY.md", "SKILL_RULES_REFERENCE.md", "TRIGGER_TYPES.md", "TROUBLESHOOTING.md"]
+  },
+  "installation": {
+    "targetDir": ".claude/skills/skill-developer",
+    "instructions": "After copying files, ensure the skill is registered in .claude/skills/skill-rules.json"
+  },
+  "repository": {
+    "url": "https://github.com/JNLei/claude-tools/tree/main/skills/skill-developer"
+  }
+}
