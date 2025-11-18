@@ -7,7 +7,7 @@
 
 ## 🎯 Overview
 
-ClaudeSmith Tools is an open-source repository of productivity-enhancing tools for Claude Code. Browse our collection at [claudesmith.com](https://claudesmith.com) or install tools directly from this repository.
+ClaudeSmith Tools is an open-source repository of productivity-enhancing tools for Claude Code. Browse our collection at [claudesmith.directory](https://claudesmith.directory) or install tools directly from this repository.
 
 ### What's Inside
 
