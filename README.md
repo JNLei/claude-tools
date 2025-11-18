@@ -22,7 +22,7 @@ ClaudeSmith Tools is an open-source repository of productivity-enhancing tools f
 
 ### Browse & Copy (Easiest)
 
-1. Visit [claudesmith.com](https://claudesmith.com)
+1. Visit [claudesmith.directory](https://claudesmith.directory)
 2. Browse tools by category
 3. Click "Copy" to copy tool content to clipboard
 4. Paste into your `.claude/` directory
@@ -260,7 +260,7 @@ Special thanks to:
 </p>
 
 <p align="center">
-  <a href="https://claudesmith.com">Website</a> •
+  <a href="https://claudesmith.directory">Website</a> •
   <a href="docs/CONTRIBUTING.md">Contribute</a> •
   <a href="https://github.com/JNLei/claude-tools/issues">Report Bug</a> •
   <a href="https://github.com/JNLei/claude-tools/discussions">Discussions</a>
