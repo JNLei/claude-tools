@@ -17,12 +17,12 @@ Each tool directory must contain a `metadata.json` file with the following struc
   "tags": ["array", "of", "strings"] (required),
   "featured": boolean (optional, default: false),
   "files": {
-    "main": "string (required) - primary file path",
+    "main": "string (required) - primary file path (omit for mcp if no files)",
     "additional": ["array", "of", "additional", "file", "paths"] (optional)
   },
   "installation": {
-    "targetDir": "string (required) - where to copy in .claude/",
-    "instructions": "string (optional) - additional setup steps"
+    "targetDir": "string (required) - where to copy in .claude/ (or command target for mcp)",
+    "instructions": "string (optional) - additional setup steps or install command"
   },
   "repository": {
     "url": "string (optional) - GitHub URL to this tool's directory",
@@ -53,7 +53,7 @@ Each tool directory must contain a `metadata.json` file with the following struc
 
 ### File References
 
-- **files.main**: Primary file path relative to tool directory
+- **files.main**: Primary file path relative to tool directory (omit for `mcp` if there are no repo files)
   - For skills: "SKILL.md"
   - For hooks: "hook-name.sh" or "hook-name.ts"
 - **files.additional**: Other files to include (e.g., ["REFERENCE.md", "EXAMPLES.md"])
@@ -63,6 +63,7 @@ Each tool directory must contain a `metadata.json` file with the following struc
 - **installation.targetDir**: Where to copy files in user's `.claude/` directory
   - For skills: ".claude/skills/[tool-name]"
   - For hooks: ".claude/hooks/[tool-name]" or ".claude/hooks/" (if single file)
+  - For mcp: can be a command target or empty when installation is command-only
 - **installation.instructions**: Additional setup steps (optional)
 
 ### Repository Metadata (Optional)
@@ -129,7 +130,7 @@ Each tool directory must contain a `metadata.json` file with the following struc
 3. **category** must be one of the six defined types
 4. **tags** array should have 1-10 items
 5. **description** should be 50-200 characters
-6. **files.main** must reference an existing file
+6. **files.main** must reference an existing file (except for `mcp` where files can be omitted)
 7. All file paths in **files.additional** must exist
 
 ## Auto-Generated Fields

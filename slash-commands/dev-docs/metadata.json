@@ -1,0 +1,17 @@
+{
+  "id": "dev-docs",
+  "name": "Dev Docs Command",
+  "category": "slash-commands",
+  "description": "Create a comprehensive strategic plan with structured task breakdown and task artifacts under dev/.",
+  "author": "Contributor",
+  "version": "1.0.0",
+  "tags": ["planning", "strategy", "tasks", "documentation", "slash-command"],
+  "featured": false,
+  "files": {
+    "main": "dev-docs.md"
+  },
+  "installation": {
+    "targetDir": ".claude/slash-commands/dev-docs",
+    "instructions": "Copy dev-docs.md into the target directory."
+  }
+}

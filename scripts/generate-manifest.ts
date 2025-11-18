@@ -14,18 +14,18 @@ import { execSync } from 'child_process';
 interface ToolMetadata {
   id: string;
   name: string;
-  category: 'hooks' | 'skills' | 'agents' | 'slash-commands';
+  category: 'hooks' | 'skills' | 'agents' | 'slash-commands' | 'plugins' | 'mcp';
   description: string;
   author: string;
   version: string;
   tags: string[];
   featured?: boolean;
-  files: {
-    main: string;
+  files?: {
+    main?: string;
     additional?: string[];
   };
   installation: {
-    targetDir: string;
+    targetDir?: string;
     instructions?: string;
   };
   repository?: {
@@ -51,10 +51,12 @@ interface Manifest {
     skills: number;
     agents: number;
     'slash-commands': number;
+    plugins: number;
+    mcp: number;
   };
 }
 
-const TOOL_CATEGORIES = ['hooks', 'skills', 'agents', 'slash-commands'] as const;
+const TOOL_CATEGORIES = ['hooks', 'skills', 'agents', 'slash-commands', 'plugins', 'mcp'] as const;
 const ROOT_DIR = path.resolve(__dirname, '..');
 
 /**
@@ -79,9 +81,9 @@ function getLastCommitDate(filePath: string): string {
  * Validate metadata against schema
  */
 function validateMetadata(metadata: any, toolPath: string): metadata is ToolMetadata {
-  const required = ['id', 'name', 'category', 'description', 'author', 'version', 'tags', 'files', 'installation'];
+  const requiredBase = ['id', 'name', 'category', 'description', 'author', 'version', 'tags', 'installation'];
 
-  for (const field of required) {
+  for (const field of requiredBase) {
     if (!(field in metadata)) {
       throw new Error(`Missing required field "${field}" in ${toolPath}/metadata.json`);
     }
@@ -95,8 +97,20 @@ function validateMetadata(metadata: any, toolPath: string): metadata is ToolMeta
     throw new Error(`Field "tags" must be an array in ${toolPath}/metadata.json`);
   }
 
-  if (!metadata.files.main) {
-    throw new Error(`Missing files.main in ${toolPath}/metadata.json`);
+  const isMcp = metadata.category === 'mcp';
+
+  if (!isMcp) {
+    if (!metadata.files || !metadata.files.main) {
+      throw new Error(`Missing files.main in ${toolPath}/metadata.json`);
+    }
+    if (!metadata.installation?.targetDir) {
+      throw new Error(`Missing installation.targetDir in ${toolPath}/metadata.json`);
+    }
+  } else {
+    // MCP can be metadata-only but should include an install command
+    if (!metadata.installation?.instructions) {
+      throw new Error(`Missing installation.instructions (command) in ${toolPath}/metadata.json`);
+    }
   }
 
   // Validate semver format
@@ -122,16 +136,20 @@ async function readMetadata(category: string, toolName: string): Promise<ToolMan
     // Validate metadata
     validateMetadata(metadata, toolPath);
 
-    // Verify main file exists
-    const mainFilePath = path.join(toolPath, metadata.files.main);
-    try {
-      await fs.access(mainFilePath);
-    } catch {
-      throw new Error(`Main file "${metadata.files.main}" not found in ${toolPath}`);
+    const isMcp = metadata.category === 'mcp';
+
+    // Verify main file exists (skip for mcp when no files are specified)
+    if (!isMcp && metadata.files?.main) {
+      const mainFilePath = path.join(toolPath, metadata.files.main);
+      try {
+        await fs.access(mainFilePath);
+      } catch {
+        throw new Error(`Main file "${metadata.files.main}" not found in ${toolPath}`);
+      }
     }
 
     // Verify additional files exist
-    if (metadata.files.additional) {
+    if (!isMcp && metadata.files?.additional) {
       for (const file of metadata.files.additional) {
         const filePath = path.join(toolPath, file);
         try {
@@ -208,6 +226,8 @@ async function generateManifest(): Promise<void> {
     skills: 0,
     agents: 0,
     'slash-commands': 0,
+    plugins: 0,
+    mcp: 0,
   };
 
   // Scan all categories
@@ -250,6 +270,8 @@ async function generateManifest(): Promise<void> {
   console.log(`  - Skills: ${categories.skills}`);
   console.log(`  - Agents: ${categories.agents}`);
   console.log(`  - Slash Commands: ${categories['slash-commands']}`);
+  console.log(`  - Plugins: ${categories.plugins}`);
+  console.log(`  - MCP: ${categories.mcp}`);
   console.log(`\nOutput: ${manifestPath}`);
 }
 

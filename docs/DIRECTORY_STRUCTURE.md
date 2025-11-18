@@ -158,6 +158,7 @@ Documentation for contributors and users.
 ### Common Files
 - Every tool directory has: `metadata.json`
 - Additional docs (like README.md) are optional; metadata should carry the essential description/installation info
+- MCP entries may be metadata-only; installation should include the command to install the server
 - metadata.json contains machine-readable metadata
 
 ## manifest.json Structure

@@ -1,0 +1,13 @@
+{
+  "id": "shadcn",
+  "name": "shadcn MCP",
+  "category": "mcp",
+  "description": "Adds the shadcn MCP server to integrate shadcn utilities with Claude Code.",
+  "author": "Contributor",
+  "version": "0.1.0",
+  "tags": ["mcp", "shadcn", "ui", "integration"],
+  "featured": false,
+  "installation": {
+    "instructions": "claude mcp add shadcn -- npx shadcn@latest mcp"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "generatedAt": "2025-11-17T22:20:37.784Z",
-  "totalTools": 7,
+  "generatedAt": "2025-11-18T02:02:12.201Z",
+  "totalTools": 11,
   "tools": [
     {
       "id": "frontend-development",
@@ -37,7 +37,7 @@
       "repository": {
         "url": "https://github.com/JNLei/claude-tools/tree/main/skills/frontend-development"
       },
-      "lastUpdated": "2025-11-17T22:20:37.740Z",
+      "lastUpdated": "2025-11-17T17:51:39-05:00",
       "downloads": 0,
       "rating": 5
     },
@@ -90,7 +90,7 @@
       "repository": {
         "url": "https://github.com/JNLei/claude-tools/tree/main/hooks/skill-activation-prompt"
       },
-      "lastUpdated": "2025-11-17T22:20:37.692Z",
+      "lastUpdated": "2025-11-17T17:51:39-05:00",
       "downloads": 0,
       "rating": 5
     },
@@ -129,7 +129,7 @@
       "repository": {
         "url": "https://github.com/JNLei/claude-tools/tree/main/skills/skill-developer"
       },
-      "lastUpdated": "2025-11-17T22:20:37.757Z",
+      "lastUpdated": "2025-11-17T17:51:39-05:00",
       "downloads": 0,
       "rating": 5
     },
@@ -178,7 +178,7 @@
       "repository": {
         "url": "https://github.com/JNLei/claude-tools/tree/main/hooks/tsc-check"
       },
-      "lastUpdated": "2025-11-17T22:20:37.724Z",
+      "lastUpdated": "2025-11-17T17:51:39-05:00",
       "downloads": 0,
       "rating": 5
     },
@@ -220,7 +220,79 @@
       "repository": {
         "url": "https://github.com/JNLei/claude-tools/tree/main/hooks/trigger-build-resolver"
       },
-      "lastUpdated": "2025-11-17T22:20:37.709Z",
+      "lastUpdated": "2025-11-17T17:51:39-05:00",
+      "downloads": 0,
+      "rating": 4
+    },
+    {
+      "id": "code-refactor-master",
+      "name": "Code Refactor Master",
+      "category": "agents",
+      "description": "Automates safe codebase refactors with structured prompts, review steps, and diff summaries.",
+      "author": "Contributor",
+      "version": "0.1.0",
+      "tags": [
+        "refactor",
+        "automation",
+        "code-quality",
+        "agents"
+      ],
+      "featured": false,
+      "files": {
+        "main": "code-refactor-master.md"
+      },
+      "installation": {
+        "targetDir": ".claude/agents/code-refactor-master",
+        "instructions": "Copy the agent files into the target directory."
+      },
+      "lastUpdated": "2025-11-18T02:02:12.138Z",
+      "downloads": 0,
+      "rating": 4
+    },
+    {
+      "id": "dev-docs",
+      "name": "Dev Docs Command",
+      "category": "slash-commands",
+      "description": "Create a comprehensive strategic plan with structured task breakdown and task artifacts under dev/.",
+      "author": "Contributor",
+      "version": "1.0.0",
+      "tags": [
+        "planning",
+        "strategy",
+        "tasks",
+        "documentation",
+        "slash-command"
+      ],
+      "featured": false,
+      "files": {
+        "main": "dev-docs.md"
+      },
+      "installation": {
+        "targetDir": ".claude/slash-commands/dev-docs",
+        "instructions": "Copy dev-docs.md into the target directory."
+      },
+      "lastUpdated": "2025-11-18T02:02:12.157Z",
+      "downloads": 0,
+      "rating": 4
+    },
+    {
+      "id": "next-devtools",
+      "name": "Next DevTools MCP",
+      "category": "mcp",
+      "description": "Adds the Next DevTools MCP server so Claude Code can access Next.js developer tooling.",
+      "author": "Contributor",
+      "version": "0.1.0",
+      "tags": [
+        "mcp",
+        "nextjs",
+        "devtools",
+        "integration"
+      ],
+      "featured": false,
+      "installation": {
+        "instructions": "claude mcp add next-devtools npx next-devtools-mcp@latest"
+      },
+      "lastUpdated": "2025-11-18T02:02:12.176Z",
       "downloads": 0,
       "rating": 4
     },
@@ -263,7 +335,28 @@
       "repository": {
         "url": "https://github.com/JNLei/claude-tools/tree/main/hooks/post-tool-use-tracker"
       },
-      "lastUpdated": "2025-11-17T22:20:37.675Z",
+      "lastUpdated": "2025-11-17T17:51:39-05:00",
+      "downloads": 0,
+      "rating": 4
+    },
+    {
+      "id": "shadcn",
+      "name": "shadcn MCP",
+      "category": "mcp",
+      "description": "Adds the shadcn MCP server to integrate shadcn utilities with Claude Code.",
+      "author": "Contributor",
+      "version": "0.1.0",
+      "tags": [
+        "mcp",
+        "shadcn",
+        "ui",
+        "integration"
+      ],
+      "featured": false,
+      "installation": {
+        "instructions": "claude mcp add shadcn -- npx shadcn@latest mcp"
+      },
+      "lastUpdated": "2025-11-18T02:02:12.194Z",
       "downloads": 0,
       "rating": 4
     },
@@ -295,7 +388,7 @@
       "repository": {
         "url": "https://github.com/JNLei/claude-tools/tree/main/skills/skill-optimizer"
       },
-      "lastUpdated": "2025-11-17T22:20:37.777Z",
+      "lastUpdated": "2025-11-17T17:51:39-05:00",
       "downloads": 0,
       "rating": 4
     }
@@ -303,9 +396,9 @@
   "categories": {
     "hooks": 4,
     "skills": 3,
-    "agents": 0,
-    "slash-commands": 0,
+    "agents": 1,
+    "slash-commands": 1,
     "plugins": 0,
-    "mcp": 0
+    "mcp": 2
   }
 }
