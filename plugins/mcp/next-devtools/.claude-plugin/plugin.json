@@ -1,0 +1,9 @@
+{
+  "name": "next-devtools",
+  "version": "0.1.0",
+  "description": "MCP server for Next.js developer tooling",
+  "author": { "name": "Contributor" },
+  "license": "MIT",
+  "keywords": ["mcp", "nextjs", "devtools"],
+  "mcpServers": "./.mcp.json"
+}

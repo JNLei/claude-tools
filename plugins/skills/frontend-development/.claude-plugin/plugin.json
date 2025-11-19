@@ -1,0 +1,8 @@
+{
+  "name": "frontend-development",
+  "version": "1.0.0",
+  "description": "Frontend development skill with design and implementation checklists",
+  "author": { "name": "ClaudeSmith" },
+  "license": "MIT",
+  "keywords": ["skills", "frontend", "ui"]
+}

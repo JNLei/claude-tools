@@ -1,0 +1,8 @@
+{
+  "name": "skill-optimizer",
+  "version": "1.0.0",
+  "description": "Skill to optimize and tune Claude Skills",
+  "author": { "name": "ClaudeSmith" },
+  "license": "MIT",
+  "keywords": ["skills", "optimization"]
+}

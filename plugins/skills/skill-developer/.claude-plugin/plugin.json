@@ -1,0 +1,8 @@
+{
+  "name": "skill-developer",
+  "version": "1.0.0",
+  "description": "Skill authoring guidance and best practices",
+  "author": { "name": "ClaudeSmith" },
+  "license": "MIT",
+  "keywords": ["skills", "authoring"]
+}

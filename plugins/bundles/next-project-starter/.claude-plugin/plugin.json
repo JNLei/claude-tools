@@ -1,0 +1,8 @@
+{
+  "name": "next-project-starter",
+  "version": "0.1.0",
+  "description": "Starter bundle for Next.js projects with commands, hooks, scripts, and MCP integration",
+  "author": { "name": "ClaudeSmith" },
+  "license": "MIT",
+  "keywords": ["bundle", "nextjs", "starter"]
+}

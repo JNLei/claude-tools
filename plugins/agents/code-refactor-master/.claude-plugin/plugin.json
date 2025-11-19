@@ -1,0 +1,8 @@
+{
+  "name": "code-refactor-master",
+  "version": "0.1.0",
+  "description": "Agent for structured, safe refactors with review steps",
+  "author": { "name": "ClaudeSmith" },
+  "license": "MIT",
+  "keywords": ["agents", "refactor"]
+}

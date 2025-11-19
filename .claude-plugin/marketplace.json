@@ -1,0 +1,140 @@
+{
+  "name": "claudesmith-marketplace",
+  "owner": {
+    "name": "ClaudeSmith Maintainers"
+  },
+  "metadata": {
+    "description": "Curated set of pure and bundled Claude Code plugins",
+    "pluginRoot": "./plugins",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "code-refactor-master",
+      "source": "./agents/code-refactor-master",
+      "description": "Agent for structured, safe refactors with review steps",
+      "category": "agents",
+      "tags": [
+        "agents",
+        "refactor"
+      ]
+    },
+    {
+      "name": "dev-docs",
+      "source": "./commands/dev-docs",
+      "description": "Command set for developer docs lookup and updates",
+      "category": "commands",
+      "tags": [
+        "commands",
+        "docs"
+      ]
+    },
+    {
+      "name": "frontend-development",
+      "source": "./skills/frontend-development",
+      "description": "Frontend development skill with design and implementation checklists",
+      "category": "skills",
+      "tags": [
+        "skills",
+        "frontend",
+        "ui"
+      ]
+    },
+    {
+      "name": "next-devtools",
+      "source": "./mcp/next-devtools",
+      "description": "MCP server for Next.js developer tooling",
+      "category": "mcp",
+      "tags": [
+        "mcp",
+        "nextjs",
+        "devtools"
+      ]
+    },
+    {
+      "name": "next-project-starter",
+      "source": "./bundles/next-project-starter",
+      "description": "Starter bundle for Next.js projects with commands, hooks, scripts, and MCP integration",
+      "category": "bundles",
+      "tags": [
+        "bundles",
+        "bundle",
+        "nextjs",
+        "starter"
+      ]
+    },
+    {
+      "name": "post-tool-use-tracker",
+      "source": "./hooks/post-tool-use-tracker",
+      "description": "PostToolUse hook to log tool usage analytics",
+      "category": "hooks",
+      "tags": [
+        "hooks",
+        "analytics"
+      ]
+    },
+    {
+      "name": "shadcn",
+      "source": "./mcp/shadcn",
+      "description": "MCP server for shadcn UI tooling",
+      "category": "mcp",
+      "tags": [
+        "mcp",
+        "shadcn",
+        "ui"
+      ]
+    },
+    {
+      "name": "skill-activation-prompt",
+      "source": "./hooks/skill-activation-prompt",
+      "description": "UserPromptSubmit hook to activate relevant skills via intent matching",
+      "category": "hooks",
+      "tags": [
+        "hooks",
+        "skills",
+        "automation"
+      ]
+    },
+    {
+      "name": "skill-developer",
+      "source": "./skills/skill-developer",
+      "description": "Skill authoring guidance and best practices",
+      "category": "skills",
+      "tags": [
+        "skills",
+        "authoring"
+      ]
+    },
+    {
+      "name": "skill-optimizer",
+      "source": "./skills/skill-optimizer",
+      "description": "Skill to optimize and tune Claude Skills",
+      "category": "skills",
+      "tags": [
+        "skills",
+        "optimization"
+      ]
+    },
+    {
+      "name": "trigger-build-resolver",
+      "source": "./hooks/trigger-build-resolver",
+      "description": "PostToolUse hook to trigger build/resolution steps",
+      "category": "hooks",
+      "tags": [
+        "hooks",
+        "build",
+        "automation"
+      ]
+    },
+    {
+      "name": "tsc-check",
+      "source": "./hooks/tsc-check",
+      "description": "PreToolUse hook to run TypeScript type-checks",
+      "category": "hooks",
+      "tags": [
+        "hooks",
+        "typescript"
+      ]
+    }
+  ]
+}
