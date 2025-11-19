@@ -55,7 +55,7 @@ function buildPluginEntry(pluginDir) {
 
   return {
     name: manifest.name,
-    source: `./${rel}`,
+    source: `./plugins/${rel}`,
     description: manifest.description || '',
     category,
     tags

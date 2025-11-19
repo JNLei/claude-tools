@@ -11,7 +11,7 @@
   "plugins": [
     {
       "name": "code-refactor-master",
-      "source": "./agents/code-refactor-master",
+      "source": "./plugins/agents/code-refactor-master",
       "description": "Agent for structured, safe refactors with review steps",
       "category": "agents",
       "tags": [
@@ -21,7 +21,7 @@
     },
     {
       "name": "dev-docs",
-      "source": "./commands/dev-docs",
+      "source": "./plugins/commands/dev-docs",
       "description": "Command set for developer docs lookup and updates",
       "category": "commands",
       "tags": [
@@ -31,7 +31,7 @@
     },
     {
       "name": "frontend-development",
-      "source": "./skills/frontend-development",
+      "source": "./plugins/skills/frontend-development",
       "description": "Frontend development skill with design and implementation checklists",
       "category": "skills",
       "tags": [
@@ -42,7 +42,7 @@
     },
     {
       "name": "next-devtools",
-      "source": "./mcp/next-devtools",
+      "source": "./plugins/mcp/next-devtools",
       "description": "MCP server for Next.js developer tooling",
       "category": "mcp",
       "tags": [
@@ -53,7 +53,7 @@
     },
     {
       "name": "next-project-starter",
-      "source": "./bundles/next-project-starter",
+      "source": "./plugins/bundles/next-project-starter",
       "description": "Starter bundle for Next.js projects with commands, hooks, scripts, and MCP integration",
       "category": "bundles",
       "tags": [
@@ -65,7 +65,7 @@
     },
     {
       "name": "post-tool-use-tracker",
-      "source": "./hooks/post-tool-use-tracker",
+      "source": "./plugins/hooks/post-tool-use-tracker",
       "description": "PostToolUse hook to log tool usage analytics",
       "category": "hooks",
       "tags": [
@@ -75,7 +75,7 @@
     },
     {
       "name": "shadcn",
-      "source": "./mcp/shadcn",
+      "source": "./plugins/mcp/shadcn",
       "description": "MCP server for shadcn UI tooling",
       "category": "mcp",
       "tags": [
@@ -86,7 +86,7 @@
     },
     {
       "name": "skill-activation-prompt",
-      "source": "./hooks/skill-activation-prompt",
+      "source": "./plugins/hooks/skill-activation-prompt",
       "description": "UserPromptSubmit hook to activate relevant skills via intent matching",
       "category": "hooks",
       "tags": [
@@ -97,7 +97,7 @@
     },
     {
       "name": "skill-developer",
-      "source": "./skills/skill-developer",
+      "source": "./plugins/skills/skill-developer",
       "description": "Skill authoring guidance and best practices",
       "category": "skills",
       "tags": [
@@ -107,7 +107,7 @@
     },
     {
       "name": "skill-optimizer",
-      "source": "./skills/skill-optimizer",
+      "source": "./plugins/skills/skill-optimizer",
       "description": "Skill to optimize and tune Claude Skills",
       "category": "skills",
       "tags": [
@@ -117,7 +117,7 @@
     },
     {
       "name": "trigger-build-resolver",
-      "source": "./hooks/trigger-build-resolver",
+      "source": "./plugins/hooks/trigger-build-resolver",
       "description": "PostToolUse hook to trigger build/resolution steps",
       "category": "hooks",
       "tags": [
@@ -128,7 +128,7 @@
     },
     {
       "name": "tsc-check",
-      "source": "./hooks/tsc-check",
+      "source": "./plugins/hooks/tsc-check",
       "description": "PreToolUse hook to run TypeScript type-checks",
       "category": "hooks",
       "tags": [
