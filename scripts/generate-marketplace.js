@@ -44,7 +44,11 @@ function buildPluginEntry(pluginDir) {
   const manifestPath = path.join(pluginDir, '.claude-plugin', 'plugin.json');
   const manifest = readJson(manifestPath);
   const rel = path.relative(PLUGINS_ROOT, pluginDir).split(path.sep).join('/');
-  const category = deriveCategory(rel);
+  let category = deriveCategory(rel);
+  // Tools in bundles directory should have category "plugin"
+  if (category === 'bundles') {
+    category = 'plugin';
+  }
   const keywords = Array.isArray(manifest.keywords) ? manifest.keywords : [];
   const baseTags = [category];
   const tags = Array.from(new Set([...baseTags, ...keywords]));
