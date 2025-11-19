@@ -55,7 +55,7 @@
       "name": "next-project-starter",
       "source": "./plugins/bundles/next-project-starter",
       "description": "Starter bundle for Next.js projects with commands, hooks, scripts, and MCP integration",
-      "category": "bundles",
+      "category": "plugin",
       "tags": [
         "bundles",
         "bundle",
