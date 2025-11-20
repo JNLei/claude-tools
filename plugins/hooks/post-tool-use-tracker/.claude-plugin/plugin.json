@@ -1,0 +1,9 @@
+{
+  "name": "post-tool-use-tracker",
+  "version": "1.0.0",
+  "description": "PostToolUse hook to log tool usage analytics",
+  "author": { "name": "ClaudeSmith" },
+  "license": "MIT",
+  "keywords": ["hooks", "analytics"],
+  "hooks": "./hooks/hooks.json"
+}

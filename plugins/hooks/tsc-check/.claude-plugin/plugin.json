@@ -1,0 +1,9 @@
+{
+  "name": "tsc-check",
+  "version": "1.0.0",
+  "description": "PreToolUse hook to run TypeScript type-checks",
+  "author": { "name": "ClaudeSmith" },
+  "license": "MIT",
+  "keywords": ["hooks", "typescript"],
+  "hooks": "./hooks/hooks.json"
+}

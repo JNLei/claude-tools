@@ -1,0 +1,8 @@
+{
+  "name": "dev-docs",
+  "version": "0.1.0",
+  "description": "Command set for developer docs lookup and updates",
+  "author": { "name": "ClaudeSmith" },
+  "license": "MIT",
+  "keywords": ["commands", "docs"]
+}

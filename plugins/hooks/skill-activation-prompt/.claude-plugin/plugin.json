@@ -1,0 +1,9 @@
+{
+  "name": "skill-activation-prompt",
+  "version": "1.0.0",
+  "description": "UserPromptSubmit hook to activate relevant skills via intent matching",
+  "author": { "name": "ClaudeSmith" },
+  "license": "MIT",
+  "keywords": ["hooks", "skills", "automation"],
+  "hooks": "./hooks/hooks.json"
+}

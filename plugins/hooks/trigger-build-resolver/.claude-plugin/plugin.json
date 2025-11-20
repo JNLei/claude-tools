@@ -1,0 +1,9 @@
+{
+  "name": "trigger-build-resolver",
+  "version": "1.0.0",
+  "description": "PostToolUse hook to trigger build/resolution steps",
+  "author": { "name": "ClaudeSmith" },
+  "license": "MIT",
+  "keywords": ["hooks", "build", "automation"],
+  "hooks": "./hooks/hooks.json"
+}
