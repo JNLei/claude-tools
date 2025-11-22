@@ -1,7 +1,7 @@
 {
   "name": "claudesmith-marketplace",
   "owner": {
-    "name": "ClaudeSmith Maintainers"
+    "name": "ClaudeSmith"
   },
   "metadata": {
     "description": "Curated set of pure and bundled Claude Code plugins",
